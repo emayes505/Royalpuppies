@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Shih Tzu Puppies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        
+        <h1 class="main-title">Dedicated To Helping You<br>Find A <span class="highlight-gold">Furever Friend</span></h1>
+        
+        <div class="location-subtitle">
+            <span class="separator"> Fort Lauderdale, FL </span>
+        </div>
+        
+        <nav>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#Dams-and-Sire" class="nav-link">Parents</a>
+            <a href="#puppies" class="nav-link">Puppies</a>
+            <a href="#contact" class="button">Contact Us</a>
+        </nav>
+    </header>
+    <div class="abt">
+    <section id="about">
+        <h2>About Our Kennel</h2>
+        <p>We are a small, home-based breeder dedicated to the Shih Tzu breed. Our puppies are raised with love, socialized early, and health-checked before they go to their forever homes.</p>
+    </section>
+    </div>
+
+    <section id="Dams-and-Sire">
+        <h2>Meet the Parents</h2>
+
+        
+        <div class="gallery">
+            
+            <div class="about-sire-dam">
+                <h3>G and Chase</h3>
+                <p>G and Chase are our beautiful Shih Tzu's. They're calm, loving temperament and are excellent mothers. #more info about dog#.</p>
+            </div>
+
+            <div class="puppy-card">
+                <img src="images/her_cropped.jpg" alt="Shih Tzu Parent 3">
+            </div>
+
+            <div class="puppy-card">
+                <img src="images/girl_1.jpg" alt="Shih Tzu Parent 1">
+            </div>
+
+            <div class="puppy-card">
+                <img src="images/girl_2.jpg" alt="Shih Tzu Parent 2">
+            </div>
+
+
+            <div class="about-sire-dam">
+                <h3>Fancy</h3>
+                <p>Fancy is our beautiful Shih Tzu. She has a calm, loving temperament and is an excellent mother. #more info about dog#.</p>
+            </div>
+            
+            <div class="puppy-card">
+                <img src="images/him_cropped.jpg" alt="Shih Tzu Parent 3">
+            </div>
+
+            <div class="puppy-card">
+                <img src="images/boy_1.jpg" alt="Shih Tzu Parent 3">
+            </div>
+            <div class="puppy-card">
+                <img src="images/boy_2.jpg" alt="Shih Tzu Parent 3">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="puppies">
+        <h2>Available Puppies</h2>
+        <p>Click any puppy to see a larger photo.</p>
+        
+        <div class="gallery">
+            <div class="puppy-card">
+                <img src="images/baby_crop_1.jpg" alt="Shih Tzu Puppy 1">
+                <h3>Name - Sex</h3>
+                <p>Info about dog here</p>
+            </div>
+            <div class="puppy-card">
+                <img src="images/baby_crop_2.jpg" alt="Shih Tzu Puppy 2">
+                <h3>Name - Sex</h3>
+                <p>Info about dog here</p>
+            </div>
+            <div class="puppy-card">
+                <img src="images/baby_crop_3.jpg" alt="Shih Tzu Puppy 3">
+                <h3>Name - Sex</h3>
+                <p>Info about dog here</p>
+            </div>
+            <div class="puppy-card">
+                <img src="images/baby_crop_4.jpg" alt="Shih Tzu Puppy 4">
+                <h3>Name - Sex</h3>
+                <p>Info about dog here</p>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Interested in a puppy? Email us at:</p>
+        <a href="mailto:breeder@example.com" class="button">Email Breeder</a>
+        <a href="https://www.facebook.com/cara.helfrich.9" target="_blank" class="button">Visit Facebook</a>
+    </section>
+      
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+
+        // Select all images inside 'puppy-card' divs
+        var images = document.querySelectorAll('.puppy-card img');
+
+        // Add click event to all images
+        images.forEach(function(img) {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        // Close button logic
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+
+        // Close if clicking outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
